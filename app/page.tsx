@@ -6,6 +6,12 @@ import Heroone from "./components/Heroone";
  import Belog from "./components/Belog";
 import Instagram from "./components/Instagram";
  import Footer from "./components/Footer";
+ import AsgaardSofa from "./shop/asgaardsofa/page";
+ import CartPage from "./shop/asgaardsofa/cartside/page";
+ import AccountPage from "./account/page";
+ import CheckOut from "./checkout/page";
+ import Cart from "./cart/page";
+ import Belogpage from "./belog/page";
 
 export default function Home() {
   return (
@@ -17,6 +23,12 @@ export default function Home() {
    <Belog />
     <Instagram />
     <Footer />
+    <AsgaardSofa />
+    <CartPage />
+    <AccountPage />
+    <CheckOut />
+    <Cart />
+    <Belogpage />
    </div>
   );
 }
