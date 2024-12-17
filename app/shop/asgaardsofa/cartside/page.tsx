@@ -42,7 +42,7 @@ const CartPage = () => {
           {/* Product Image */}
           <div className="flex items-center">
             <Image
-              src="/image/asgaardsofa.jpeg"
+              src="/asgaardsofa.jpeg"
               alt="Asgaard Sofa"
               width={400}
               height={400}
