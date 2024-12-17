@@ -5,26 +5,29 @@ import Image from 'next/image';
 const Shop = () => {
   return (
     <div>
-      {/* First Section with Tailwind Background */}
 {/* First Section with Tailwind Background */}
 <section
   className="relative h-[60vh] w-full bg-cover bg-center"
   style={{
-    backgroundImage: `url('/bgshop.png')`, // Using the image as a background for full control
+    backgroundImage: `url('/bgpic.jpg')`, // Using the image as a background for full control
   }}
 >
   {/* Overlay */}
   <div className="absolute inset-0 bg-white opacity-50"></div>
-
   {/* Content */}
   <div className="absolute inset-0 flex flex-col items-center justify-center text-black text-center">
-    <h1 className="text-7xl mb-7 font-bold">Shop</h1>
+  <Image
+          src="/bg.png"
+          alt="Product 4"
+          width={70}
+          height={70}
+          className="object-contain mx-auto"
+        />
+    <h1 className="text-7xl mb-7 font-medium">Shop</h1>
     <p className="text-2xl mt-1 font-semibold">
-      <Link href="/">Home</Link> &gt; Shop
+      <Link href="/">Home</Link> &gt; <span className='text-gray-600'> Shop</span>
     </p>
   </div>
-
-
 </section>
 
 
@@ -224,28 +227,26 @@ const Shop = () => {
   </div>
 </section>
 
-
-
       {/* Pagination Section */}
       <section className="py-10 text-center">
         <div className="flex justify-center gap-4">
           <Link href={`/shop?page=1`}>
-            <div className="w-10 h-10 flex items-center justify-center border-2 rounded-md hover:bg-black hover:text-white">
+            <div className="w-10 h-10 flex items-center justify-center border-yellow-100 rounded-md bg-yellow-200 hover:bg-yellow-300 hover:text-black">
               1
             </div>
           </Link>
           <Link href={`/shop?page=2`}>
-            <div className="w-10 h-10 flex items-center justify-center border-2 rounded-md hover:bg-black hover:text-white">
+            <div className="w-10 h-10 flex items-center justify-center border-yellow-100 rounded-md bg-yellow-100 hover:bg-yellow-200 hover:text-black">
               2
             </div>
           </Link>
           <Link href={`/shop?page=3`}>
-            <div className="w-10 h-10 flex items-center justify-center border-2 rounded-md hover:bg-black hover:text-white">
+            <div className="w-10 h-10 flex items-center justify-center border-yellow-100 rounded-md bg-yellow-100 hover:bg-yellow-200 hover:text-black">
               3
             </div>
           </Link>
           <Link href={`/shop?page=next`}>
-            <div className="w-10 h-10 flex items-center justify-center border-2 rounded-md hover:bg-black hover:text-white">
+            <div className="w-10 h-10 flex items-center justify-center border-yellow-100 rounded-md bg-yellow-100 hover:bg-yellow-200 hover:text-black">
               Next
             </div>
           </Link>
@@ -253,29 +254,36 @@ const Shop = () => {
       </section>
 
  {/* 3RD Section: CONCEPT Posts */}
-<section className="bg-gray-100 text-black py-10">
+ <section className="bg-pink-50 text-black py-10">
   <div className="container mx-auto px-4">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {/* First Column */}
-      <div className="text-center">
+      <div className="flex flex-col items-center text-center">
         <h2 className="text-black font-bold text-3xl">Free Delivery</h2>
-        <p className="text-lg text-gray-700">For all orders over $50, consectetur adipim scing elit.</p>
+        <p className="text-2xl text-gray-500 flex-grow">
+          For all orders over $50, consectetur <span className='pr-48'>adipim scing elit.</span>
+        </p>
       </div>
 
       {/* Second Column */}
-      <div className="text-center">
+      <div className="flex flex-col items-center text-center">
         <h2 className="text-black font-bold text-3xl">90 Days Return</h2>
-        <p className="text-lg text-gray-700">If the product has an issue, consectetur adipim scing elit.</p>
+        <p className="text-xl text-gray-500 flex-grow">
+          If the product has an issue, consectetur adipim scing elit.
+        </p>
       </div>
 
       {/* Third Column */}
-      <div className="text-center">
+      <div className="flex flex-col items-center text-center">
         <h2 className="text-black font-bold text-3xl">Secure Payments</h2>
-        <p className="text-lg text-gray-700">100% secure payments, consectetur adipim scing elit.</p>
+        <p className="text-2xl text-gray-500 flex-grow">
+          100% secure payments, consectetur <span className='pr-48'>adipim scing elit.</span>
+        </p>
       </div>
     </div>
   </div>
 </section>
+
 <footer className="bg-white py-8 border-t border-gray-200">
             <div className="container mx-auto px-4 md:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -287,45 +295,45 @@ const Shop = () => {
 
                     {/* Links */}
                     <div>
-                        <h3 className="text-gray-500 text-sm font-medium mb-3">Links</h3>
+                        <h3 className="text-gray-400 text-sm font-medium mb-3">Links</h3>
                         <ul className="space-y-2">
                             <li>
-                                <a href="#" className="text-gray-800 hover:text-gray-900 transition">Home</a>
+                                <a href="#" className="text-black hover:text-gray-700 transition">Home</a>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-800 hover:text-gray-900 transition">Shop</a>
+                                <a href="#" className="text-black hover:text-gray-700 transition">Shop</a>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-800 hover:text-gray-900 transition">About</a>
+                                <a href="#" className="text-black hover:text-gray-700 transition">About</a>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-800 hover:text-gray-900 transition">Contact</a>
+                                <a href="#" className="text-black hover:text-gray-700 transition">Contact</a>
                             </li>
                         </ul>
                     </div>
 
                     {/* Help */}
                     <div>
-                        <h3 className="text-gray-500 text-sm font-medium mb-3">Help</h3>
+                        <h3 className="text-gray-400 text-sm font-medium mb-3">Help</h3>
                         <ul>
                             <li>
-                                <a href="#" className="text-gray-800 hover:text-gray-900 transition">Payment Options</a>
+                                <a href="#" className="text-black hover:text-gray-700 transition">Payment Options</a>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-800 hover:text-gray-900 transition">Return</a>
+                                <a href="#" className="text-black hover:text-gray-700 transition">Return</a>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-800 hover:text-gray-900 transition">Privacy Policies</a>
+                                <a href="#" className="text-black hover:text-gray-700 transition">Privacy Policies</a>
                             </li>
                         </ul>
                     </div>
 
                     {/* Newsletter */}
                     <div>
-                        <h3 className="text-gray-500 text-sm font-medium mb-3">Newsletter</h3>
+                        <h3 className="text-gray-400 text-sm font-medium mb-3">Newsletter</h3>
                         <div className="flex items-center">
                             <input type="email" placeholder="Enter Your Email Address" className="flex-1 px-4 py-2 border-gray-300 rounded-l-md focus:outline-none focus:ring-1 focus:ring-gray-400" />
-                            <button className=" text-black underline  px-4 py-2 font-bold hover:bg-gray-800 transition">Subscribe</button>
+                            <button className=" text-black underline  px-4 py-2 font-bold hover:bg-gray-300 transition">Subscribe</button>
                         </div>
                     </div>
                 </div>
